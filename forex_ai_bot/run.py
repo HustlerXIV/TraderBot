@@ -15,6 +15,7 @@ import json
 import sys
 from .config import BotConfig, config
 from .bot import ForexAIBot
+from .report import generate_report
 
 
 def main():
@@ -34,6 +35,7 @@ Examples:
     parser.add_argument("--backtest", action="store_true", help="Run backtest on historical data")
     parser.add_argument("--train", action="store_true", help="Train/retrain models only")
     parser.add_argument("--status", action="store_true", help="Show bot and model status")
+    parser.add_argument("--report", action="store_true", help="Show performance report + live trading readiness")
     parser.add_argument("--live", action="store_true", help="Enable LIVE trading (real money!)")
 
     # Backtest options
@@ -101,7 +103,10 @@ Examples:
 
     bot = ForexAIBot(config)
 
-    if args.backtest:
+    if args.report:
+        generate_report()
+
+    elif args.backtest:
         results = bot.backtest(args.symbol, args.bars)
         print("\n" + "=" * 60)
         print("BACKTEST RESULTS")
