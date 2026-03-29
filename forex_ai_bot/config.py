@@ -29,9 +29,9 @@ for d in [DATA_DIR, MODEL_DIR, LOG_DIR, CHECKPOINT_DIR]:
 @dataclass
 class MT5Config:
     """MetaTrader 5 connection settings."""
-    login: int = 0              # Your MT5 account number
-    password: str = ""          # Your MT5 password
-    server: str = ""            # Your broker's MT5 server name
+    login: int = 1600114552              # Your MT5 account number
+    password: str = "6#x1fQI6"          # Your MT5 password
+    server: str = "OANDA_Global-Demo-1"            # Your broker's MT5 server name
     path: str = ""              # Path to MT5 terminal (e.g. C:/Program Files/MetaTrader 5/terminal64.exe)
     timeout: int = 60000        # Connection timeout in ms
 
