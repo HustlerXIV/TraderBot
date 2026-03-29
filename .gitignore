@@ -1,0 +1,31 @@
+# Credentials - NEVER commit this
+.env
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Trained models (can be large, retrain on server)
+forex_ai_bot/models/
+forex_ai_bot/checkpoints/
+
+# Logs
+forex_ai_bot/logs/
+
+# Data cache
+forex_ai_bot/data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
